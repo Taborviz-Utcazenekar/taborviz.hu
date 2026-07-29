@@ -1,5 +1,7 @@
 ---
 import "../assets/app.css";
+
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="hu">
@@ -11,7 +13,8 @@ import "../assets/app.css";
     <meta name="generator" content={Astro.generator} />
     <title>Táborvíz Utcazenekar</title>
   </head>
-  <body>
+  <body class="bg-base-200 min-h-screen">
+    <Navbar />
     <slot />
   </body>
 </html>

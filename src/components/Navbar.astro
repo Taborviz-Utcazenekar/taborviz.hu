@@ -1,0 +1,63 @@
+---
+/**
+ * Mostly copied from the responsive navbar component example:
+ * https://daisyui.com/components/navbar/#responsive-collapse-on-small-screen-full-content-on-large-screen
+ */
+
+import MenuIcon from "./MenuIcon.astro";
+---
+
+<div class="max-lg:collapse shadow-sm w-full rounded-md">
+  <input id="navbar-toggle" class="peer hidden" type="checkbox" />
+  <label
+    for="navbar-toggle"
+    class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
+  <div class="collapse-title navbar">
+    <div class="navbar-start">
+      <label for="navbar-toggle" class="btn btn-ghost lg:hidden">
+        <MenuIcon />
+      </label>
+      <button class="btn btn-ghost text-xl">⛲ Táborvíz</button>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><button>Rólunk</button></li>
+        <li><button>Tagok</button></li>
+        <li>
+          <details>
+            <summary>Dalok</summary>
+            <ul class="p-2 bg-base-100 w-40 z-1">
+              <li><button>🇭🇺 Magyar</button></li>
+              <li><button>🇬🇧 Angol</button></li>
+            </ul>
+          </details>
+        </li>
+        <li><button>Média</button></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <div class="flex gap-0.5 text-xl px-4">
+        <span>🎵</span>
+        <span class="translate-y-1">🎸</span>
+        <span class="-translate-y-1">🎤</span>
+        <span class="translate-y-1">🎹</span>
+        <span class="-translate-y-1">🥁</span>
+        <span>🎶</span>
+      </div>
+    </div>
+  </div>
+  <div class="collapse-content lg:hidden z-1">
+    <ul class="menu">
+      <li><button>Rólunk</button></li>
+      <li><button>Tagok</button></li>
+      <li>
+        <button>Dalok</button>
+        <ul>
+          <li><button>🇭🇺 Magyar</button></li>
+          <li><button>🇬🇧 Angol</button></li>
+        </ul>
+      </li>
+      <li><button>Média</button></li>
+    </ul>
+  </div>
+</div>

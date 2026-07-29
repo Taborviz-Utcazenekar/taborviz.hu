@@ -5,6 +5,11 @@
  */
 
 import MenuIcon from "./MenuIcon.astro";
+
+const pathname = Astro.url.pathname;
+const isActive = (href) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+const linkClass = (href) => (isActive(href) ? "font-semibold" : "");
 ---
 
 <header class="max-md:collapse shadow-sm w-full rounded-md">
@@ -21,18 +26,18 @@ import MenuIcon from "./MenuIcon.astro";
     </div>
     <nav class="navbar-center hidden md:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a href="/">Rólunk</a></li>
-        <li><a href="/tagok">Tagok</a></li>
+        <li><a class={linkClass("/")} href="/">Rólunk</a></li>
+        <li><a class={linkClass("/tagok")} href="/tagok">Tagok</a></li>
         <li>
           <details>
-            <summary>Dalok</summary>
+            <summary class={linkClass("/dalok")}>Dalok</summary>
             <ul class="p-2 bg-base-100 w-40 z-1">
               <li><a href="/dalok#magyar">🇭🇺 Magyar</a></li>
               <li><a href="/dalok#angol">🇬🇧 Angol</a></li>
             </ul>
           </details>
         </li>
-        <li><a href="/media">Média</a></li>
+        <li><a class={linkClass("/media")} href="/media">Média</a></li>
       </ul>
     </nav>
     <div class="navbar-end">
@@ -48,16 +53,16 @@ import MenuIcon from "./MenuIcon.astro";
   </div>
   <nav class="collapse-content md:hidden z-1">
     <ul class="menu">
-      <li><a href="/">Rólunk</a></li>
-      <li><a href="/tagok">Tagok</a></li>
+      <li><a class={linkClass("/")} href="/">Rólunk</a></li>
+      <li><a class={linkClass("/tagok")} href="/tagok">Tagok</a></li>
       <li>
-        <a href="/dalok">Dalok</a>
+        <a class={linkClass("/dalok")} href="/dalok">Dalok</a>
         <ul>
           <li><a href="/dalok#magyar">🇭🇺 Magyar</a></li>
           <li><a href="/dalok#angol">🇬🇧 Angol</a></li>
         </ul>
       </li>
-      <li><a href="/media">Média</a></li>
+      <li><a class={linkClass("/media")} href="/media">Média</a></li>
     </ul>
   </nav>
 </header>

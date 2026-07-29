@@ -7,19 +7,19 @@
 import MenuIcon from "./MenuIcon.astro";
 ---
 
-<div class="max-lg:collapse shadow-sm w-full rounded-md">
+<div class="max-md:collapse shadow-sm w-full rounded-md">
   <input id="navbar-toggle" class="peer hidden" type="checkbox" />
   <label
     for="navbar-toggle"
-    class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
+    class="fixed inset-0 hidden max-md:peer-checked:block"></label>
   <div class="collapse-title navbar">
     <div class="navbar-start">
-      <label for="navbar-toggle" class="btn btn-ghost lg:hidden">
+      <label for="navbar-toggle" class="btn btn-ghost md:hidden">
         <MenuIcon />
       </label>
       <button class="btn btn-ghost text-xl">⛲ Táborvíz</button>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden md:flex">
       <ul class="menu menu-horizontal px-1">
         <li><button>Rólunk</button></li>
         <li><button>Tagok</button></li>
@@ -46,7 +46,7 @@ import MenuIcon from "./MenuIcon.astro";
       </div>
     </div>
   </div>
-  <div class="collapse-content lg:hidden z-1">
+  <div class="collapse-content md:hidden z-1">
     <ul class="menu">
       <li><button>Rólunk</button></li>
       <li><button>Tagok</button></li>

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="hero min-h-[40vh]">
+  <div class="hero min-h-[10vh]">
     <div class="hero-content text-center">
       <div>
         <h1 class="text-4xl font-bold tracking-tight text-base-content">
@@ -11,9 +11,31 @@ import Layout from "../layouts/Layout.astro";
         </h1>
         <p class="text-base-content/70 py-6">
           Örülünk, hogy megtaláltad az online felületünket, nézz körül bátran és
-          ismerj meg minket jobban! :)
+          ismerj meg minket jobban! 🙂
         </p>
       </div>
     </div>
   </div>
+
+  <section class="hero min-h-[30vh] rounded-2xl p-6">
+    <div class="hero-content flex-col lg:flex-row-reverse gap-8 bg-base-100">
+      <img
+        src="/image/lakotelep-szokokut.jpg"
+        class="max-w-sm rounded-lg shadow-2xl w-full object-cover"
+      />
+      <div class="max-w-md space-y-4">
+        <h2 class="text-3xl font-bold text-base-content text-center">Rólunk</h2>
+        <p class="text-base text-base-content/80">
+          Körülbelül két éve aktív zenekarunk azzal a céllal jött létre, hogy
+          Budaörs tereit — előnyben részesítve azokat, ahol szökőkút is van,
+          innen ered a Táborvíz elnevezés 😉 — az utcazene műfajával színesítse.
+          Repertoárunk főként széles körben ismert dalokból áll, melyek közül
+          szinte biztos, hogy mindenkinek akad néhány olyan, aminek legalább a
+          refrénjét fejből tudja, úgyhogy bátorítjuk az épp arra járókat, hogy
+          ne csak hallgatók legyenek, hanem osztozzanak is a közös zene
+          örömében!
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>

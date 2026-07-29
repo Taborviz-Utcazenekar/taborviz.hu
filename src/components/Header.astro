@@ -17,22 +17,22 @@ import MenuIcon from "./MenuIcon.astro";
       <label for="navbar-toggle" class="btn btn-ghost md:hidden">
         <MenuIcon />
       </label>
-      <button class="btn btn-ghost text-xl">⛲ Táborvíz</button>
+      <a href="/" class="btn btn-ghost text-xl">⛲ Táborvíz</a>
     </div>
     <nav class="navbar-center hidden md:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><button>Rólunk</button></li>
-        <li><button>Tagok</button></li>
+        <li><a href="/">Rólunk</a></li>
+        <li><a href="/tagok">Tagok</a></li>
         <li>
           <details>
             <summary>Dalok</summary>
             <ul class="p-2 bg-base-100 w-40 z-1">
-              <li><button>🇭🇺 Magyar</button></li>
-              <li><button>🇬🇧 Angol</button></li>
+              <li><a href="/dalok#magyar">🇭🇺 Magyar</a></li>
+              <li><a href="/dalok#angol">🇬🇧 Angol</a></li>
             </ul>
           </details>
         </li>
-        <li><button>Média</button></li>
+        <li><a href="/media">Média</a></li>
       </ul>
     </nav>
     <div class="navbar-end">
@@ -48,16 +48,16 @@ import MenuIcon from "./MenuIcon.astro";
   </div>
   <nav class="collapse-content md:hidden z-1">
     <ul class="menu">
-      <li><button>Rólunk</button></li>
-      <li><button>Tagok</button></li>
+      <li><a href="/">Rólunk</a></li>
+      <li><a href="/tagok">Tagok</a></li>
       <li>
-        <button>Dalok</button>
+        <a href="/dalok">Dalok</a>
         <ul>
-          <li><button>🇭🇺 Magyar</button></li>
-          <li><button>🇬🇧 Angol</button></li>
+          <li><a href="/dalok#magyar">🇭🇺 Magyar</a></li>
+          <li><a href="/dalok#angol">🇬🇧 Angol</a></li>
         </ul>
       </li>
-      <li><button>Média</button></li>
+      <li><a href="/media">Média</a></li>
     </ul>
   </nav>
 </header>

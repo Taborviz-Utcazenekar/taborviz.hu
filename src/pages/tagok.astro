@@ -1,7 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Member from "../components/Member.astro";
 ---
 
 <Layout>
   <h2 class="text-3xl font-bold text-base-content text-center">Tagok</h2>
+  <h3 class="text-2xl font-bold my-8 text-center">Rendszeres résztvevőink</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Attila"
+      description="Cajon, gitár, basszusgitár"
+    />
+    <Member
+      avatar="/image/avatar-female.png"
+      name="Bogi"
+      description="Ének, billentyű"
+    />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Isti"
+      description="Gitár, billentyű"
+    />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Miki"
+      description="Cajon, lábcin, shaker és bármi, ami ritmus"
+    />
+    <Member
+      avatar="/image/avatar-female.png"
+      name="Zelma"
+      description="Ének, gitár"
+    />
+    <Member avatar="/image/avatar-female.png" name="Zsófi" description="Ének" />
+  </div>
+  <h3 class="text-2xl font-bold my-8 text-center">Alkalmi vendégeink</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <Member avatar="/image/avatar-female.png" name="Ági" description="Ének" />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Andris"
+      description="Billentyű"
+    />
+    <Member avatar="/image/avatar-female.png" name="Dóri" description="Ének" />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Félix"
+      description="Billentyű"
+    />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Kristóf"
+      description="Basszusgitár"
+    />
+    <Member
+      avatar="/image/avatar-female.png"
+      name="Mari"
+      description="Billentyű"
+    />
+    <Member avatar="/image/avatar-female.png" name="Rebi" description="Ének" />
+    <Member
+      avatar="/image/avatar-male.png"
+      name="Ricsi"
+      description="Basszusgitár"
+    />
+  </div>
 </Layout>

@@ -10,8 +10,8 @@ interface Props {
 const { time, title, description, position } = Astro.props;
 
 const { timelinePosition, textPosition } = {
-  left: { timelinePosition: "start", textPosition: "end" },
-  right: { timelinePosition: "end", textPosition: "start" },
+  left: { timelinePosition: "timeline-start", textPosition: "md:text-end" },
+  right: { timelinePosition: "timeline-end", textPosition: "md:text-start" },
 }[position];
 ---
 
@@ -19,7 +19,7 @@ const { timelinePosition, textPosition } = {
   <div class="timeline-middle">
     <CircleIcon />
   </div>
-  <div class={`timeline-${timelinePosition} mb-10 md:text-${textPosition}`}>
+  <div class={`${timelinePosition} mb-10 ${textPosition}`}>
     <a href={`https://media.taborviz.hu/s/${time}`} target="_blank">
       <time class="font-mono italic link">{time}</time>
     </a>

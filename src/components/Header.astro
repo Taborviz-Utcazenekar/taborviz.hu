@@ -12,7 +12,18 @@ const isActive = (href) =>
 const linkClass = (href) => (isActive(href) ? "font-semibold" : "");
 ---
 
-<header class="max-md:collapse shadow-sm w-full rounded-md">
+<header
+  class:list={[
+    "max-md:collapse",
+    "shadow-sm",
+    "w-full",
+    "rounded-md",
+    "sticky",
+    "top-0",
+    "z-50",
+    "bg-base-200",
+  ]}
+>
   <input id="navbar-toggle" class="peer hidden" type="checkbox" />
   <label
     for="navbar-toggle"

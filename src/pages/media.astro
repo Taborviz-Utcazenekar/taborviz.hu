@@ -1,7 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import TimelineEvent from "../components/TimelineEvent.astro";
 ---
 
 <Layout>
   <h2 class="text-3xl font-bold text-base-content text-center">Média</h2>
+  <p class="my-4">
+    Az alábbi eseménynaplóban található <span
+      class="tooltip link"
+      data-tip="A dátumra kattintva, feltöltéshez pedig jobb felül a + jelre"
+    >
+      linkeken
+    </span> keresztül elérhető közös médiamegosztó felületünk, ahol az alkalmainkon
+    készült felvételeiteket ti is közzétehetitek, illetve megtekinthetitek egymás
+    fotóit és videóit is.
+  </p>
+  <ul
+    class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+  >
+    <TimelineEvent
+      time="2026-07-27"
+      title="Lakótelep"
+      description="Andris, Bogi, Isti, Zelma, Zsófi"
+      position="left"
+    />
+    <TimelineEvent
+      time="2026-05-08"
+      title="Lakótelep (Budaörs Fesztivál)"
+      description="Attila, Bogi, Dóri, Félix, Isti, Kristóf, Zsófi"
+      position="right"
+    />
+    <TimelineEvent
+      time="2025-10-18"
+      title="Kálvária tér"
+      description="Attila, Bogi, Isti, Kristóf, Mari, Miki, Rebi, Zelma, Zsófi"
+      position="left"
+    />
+    <TimelineEvent
+      time="2025-09-06"
+      title="Kálvária tér"
+      description="Bogi, Isti, Miki, Rebi, Zelma, Zsófi"
+      position="right"
+    />
+    <TimelineEvent
+      time="2025-04-26"
+      title="Kálvária tér"
+      description="Ági, Isti, Miki, Ricsi"
+      position="left"
+    />
+    <TimelineEvent
+      time="2024-05-11"
+      title="Kálvária tér"
+      description="Attila, Dóri, Isti"
+      position="right"
+    />
+    <TimelineEvent
+      time="2023-09-02"
+      title="Kálvária tér"
+      description="Attila, Isti"
+      position="left"
+    />
+  </ul>
 </Layout>

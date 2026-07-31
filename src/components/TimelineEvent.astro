@@ -1,0 +1,30 @@
+---
+import CircleIcon from "./CircleIcon.astro";
+
+interface Props {
+  time: string;
+  title: string;
+  description: string;
+}
+
+const { time, title, description, position } = Astro.props;
+
+const { timelinePosition, textPosition } = {
+  left: { timelinePosition: "start", textPosition: "end" },
+  right: { timelinePosition: "end", textPosition: "start" },
+}[position];
+---
+
+<li>
+  <div class="timeline-middle">
+    <CircleIcon />
+  </div>
+  <div class={`timeline-${timelinePosition} mb-10 md:text-${textPosition}`}>
+    <a href={`https://media.taborviz.hu/s/${time}`} target="_blank">
+      <time class="font-mono italic link">{time}</time>
+    </a>
+    <div class="text-lg font-black">{title}</div>
+    {description}
+  </div>
+  <hr />
+</li>

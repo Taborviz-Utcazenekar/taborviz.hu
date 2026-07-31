@@ -1,7 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Artist from "../components/Artist.astro";
 ---
 
 <Layout>
-  <h2 class="text-3xl font-bold text-base-content text-center">Dalok</h2>
+  <h2 class="text-3xl font-bold text-base-content text-center my-2">Dalok</h2>
+  <article>
+    <p class="text-base text-base-content">
+      Az alábbi dalokat mondhatni, hogy ismerjük, szeretjük és többé-kevésbé el
+      is tudjuk játszani, de ha van ezen felül kívánságotok, azt jelezhetitek
+      akár <a class="link" href="mailto:dalok@taborviz.hu">email-ben</a>, vagy
+      egy-egy eseményen személyesen is, célunk, hogy folyamatosan bővítsük a
+      repertoárunkat!
+    </p>
+    <p class="text-base text-base-content">
+      A lényeg igazából nem az, hogy egy előre összeállított fix listáról
+      zenéljünk begyakorolt számokat, hanem hogy a hallgatók és mi is jól
+      érezzük magunkat, úgyhogy ha éppen valami eszünkbe jut, vagy valaki kér
+      tőlünk egy olyan dalt, ami nem teljesen ismeretlen számunkra, akkor
+      spontán is szoktunk ötletelni és kísérletezni.
+    </p>
+  </article>
+
+  <section>
+    <h3 id="magyar" class="text-2xl font-bold my-8 text-center">🇭🇺 Magyar</h3>
+    <ul class="list bg-base-100 rounded-box shadow">
+      <Artist name="100 Folk Celsius" songs={["Ohio"]} />
+      <Artist name="Bagossy Brothers Company" songs={["Olyan Ő"]} />
+      <Artist name="Ham Ko Ham" songs={["Ellopták a biciklim"]} />
+      <Artist name="Honeybeast" songs={["Így játszom"]} />
+      <Artist name="Kispál és a Borz" songs={["Csillag vagy fecske"]} />
+      <Artist name="Magashegyi Underground" songs={["Árnyékok"]} />
+      <Artist name="Margaret Island" songs={["Hóvirág", "Nem voltál jó"]} />
+      <Artist name="Ocho Macho" songs={["Jó nekem"]} />
+      <Artist
+        name="Quimby"
+        songs={["Ajjajjaj", "Autó egy szerpentinen", "Most múlik pontosan"]}
+      />
+      <Artist name="Republic" songs={["A 67-es út", "Szállj el kismadár"]} />
+      <Artist name="Szabó Balázs Bandája" songs={["Bájoló"]} />
+      <Artist name="Tankcsapda" songs={["Örökké tart"]} />
+      <!-- <Artist name="" songs={[""]} /> -->
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="angol" class="text-2xl font-bold my-8 text-center">🇬🇧 Angol</h3>
+    <ul class="list bg-base-100 rounded-box shadow">
+      <Artist name="Adele" songs={["Rolling in the Deep"]} />
+      <Artist name="Ben E. King" songs={["Stand by Me"]} />
+      <Artist name="Fools Garden" songs={["Lemon Tree"]} />
+      <Artist name="Green Day" songs={["Boulevard of Broken Dreams"]} />
+      <Artist name="Imagine Dragons" songs={["Believer"]} />
+      <Artist name="Jason Mraz" songs={["I'm Yours"]} />
+      <Artist name="John Denver" songs={["Country Roads"]} />
+      <Artist name="Lady Gaga" songs={["Shallow"]} />
+      <Artist name="Leonard Cohen" songs={["Hallelujah"]} />
+      <Artist name="Lorde" songs={["Royals"]} />
+      <Artist name="Oasis" songs={["Wonderwall"]} />
+      <Artist name="Vance Joy" songs={["Riptide"]} />
+      <!-- <Artist -->
+      <!--   name="Queen" -->
+      <!--   songs={[ -->
+      <!--     "Don't Stop Me Now", -->
+      <!--     "Somebody to Love", -->
+      <!--     "Somebody to Love", -->
+      <!--     "Somebody to Love", -->
+      <!--     "Somebody to Love", -->
+      <!--     "Crazy Little Thing Called Love", -->
+      <!--   ]} -->
+      <!-- /> -->
+      <!-- <Artist -->
+      <!--   name="The Killers" -->
+      <!--   songs={["Mr. Brightside", "Somebody Told Me", "When You Were Young"]} -->
+      <!-- /> -->
+      <!-- <Artist -->
+      <!--   name="Journey" -->
+      <!--   songs={["Don't Stop Believin'", "Any Way You Want It"]} -->
+      <!-- /> -->
+    </ul>
+  </section>
 </Layout>
